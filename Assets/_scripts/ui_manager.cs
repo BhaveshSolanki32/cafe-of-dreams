@@ -17,10 +17,10 @@ public class ui_manager : MonoBehaviour
         open_pannel(0);
         charater_d data = tar.GetComponent<charater_d>();
         Transform panel = transform.GetChild(0).GetChild(0);
-        panel.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = data._name;
-        panel.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = data.age.ToString();
-        panel.GetChild(2).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = data.occup;
-        panel.GetChild(3).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = data.sin;
-        panel.GetChild(4).gameObject.GetComponent<Slider>().value = data.sanity;
+        panel.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = data._name;
+        panel.GetChild(2).gameObject.GetComponent<Image>().sprite = tar.GetComponent<SpriteRenderer>().sprite;
+        //panel.GetChild(2).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = data.occup;
+        //panel.GetChild(3).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = data.sin;
+        //panel.GetChild(4).gameObject.GetComponent<Slider>().value = data.sanity;
     }
 }

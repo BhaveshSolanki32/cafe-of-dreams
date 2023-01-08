@@ -7,8 +7,13 @@ public class slection : MonoBehaviour
     GameObject selectedObject;
     GameObject hoverObject;
     [SerializeField] ui_manager ui_man;
+    public float speed;
+    Vector3 mouse_init_pos;
+
+
     private void Start()
     {
+        Vector3 mouse_init_pos = Input.mousePosition;
         if (cam == null)
         {
             cam = Camera.main;
@@ -18,36 +23,41 @@ public class slection : MonoBehaviour
 
     private void Update()
     {
+
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 mouse_new_pos = Input.mousePosition;
+            print(mouse_new_pos.x - mouse_init_pos.x);
+            pan_cam(mouse_new_pos.x - mouse_init_pos.x);
+        }
+        selection();
+        mouse_init_pos = Input.mousePosition;
+    }
+    void selection()
+    {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
         object_deselect(selectedObject);
         object_deselect(hoverObject);
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.DrawLine(ray.origin,hit.collider.gameObject.transform.position,Color.green);
+            Debug.DrawLine(ray.origin, hit.collider.gameObject.transform.position, Color.green);
             if (hit.collider.tag == "npc")
             {
                 hoverObject = hit.collider.gameObject;
                 if (Input.GetMouseButtonDown(0))
+                {
+                    if (selectedObject != null)
+                        selectedObject.GetComponent<SpriteRenderer>().color = Color.white;
                     selectedObject = hoverObject;
-            }
-            else if (Input.GetMouseButtonDown(0))
-            {
-                selectedObject = null;
-                ui_man.close_pannel(0);
+                }
+
             }
             else
             {
                 hoverObject = null;
             }
         }
-        else if (Input.GetMouseButtonDown(0))
-        {
-            selectedObject = null;
-            ui_man.close_pannel(0);
-        }
-
 
         if ((selectedObject == null || hoverObject != selectedObject) && hoverObject != null)
         {
@@ -59,10 +69,17 @@ public class slection : MonoBehaviour
             selectedObject.GetComponent<SpriteRenderer>().color = Color.red;
             ui_man.char_data_assign(selectedObject);
         }
-
-
     }
 
+    private void pan_cam(float v)
+    {
+        if (v == 0) return;
+        Vector3 left = new Vector3(370.200012f, 147.200012f, 480.600006f);
+        if (v < 0)
+            cameras.transform.position = Vector3.MoveTowards(cameras.transform.position, left, speed);
+        else
+            cameras.transform.position = Vector3.MoveTowards(cameras.transform.position, new Vector3(290.899994f, 147.200012f, 367), speed);
+    }
 
     void object_deselect(GameObject tar)
     {
@@ -70,5 +87,11 @@ public class slection : MonoBehaviour
         {
             tar.GetComponent<SpriteRenderer>().color = Color.white;
         }
+    }
+    public void obj_deslect()
+    {
+        if (selectedObject != null)
+                        selectedObject.GetComponent<SpriteRenderer>().color = Color.white;
+        selectedObject = null;
     }
 }
