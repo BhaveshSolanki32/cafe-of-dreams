@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class slection : MonoBehaviour
 {
-    public Camera cam;
-    public GameObject selectedObject;
+    Camera cam;
+    GameObject selectedObject;
     GameObject hoverObject;
-
+    [SerializeField] ui_manager ui_man;
     private void Start()
     {
         if (cam == null)
@@ -21,18 +21,36 @@ public class slection : MonoBehaviour
 
         object_deselect(selectedObject);
         object_deselect(hoverObject);
-
-        if (Physics.Raycast(ray, out hit) && hit.collider.tag == "npc")
+        if (Physics.Raycast(ray, out hit))
         {
-            hoverObject = hit.collider.gameObject;
-            if (Input.GetMouseButtonDown(0))
-                selectedObject = hoverObject;
+            if (hit.collider.tag == "npc")
+            {
+                hoverObject = hit.collider.gameObject;
+                if (Input.GetMouseButtonDown(0))
+                    selectedObject = hoverObject;
+            }
+            else if (Input.GetMouseButtonDown(0))
+            {
+                selectedObject = null;
+                ui_man.close_pannel(0);
+            }
+            else
+            {
+                hoverObject = null;
+            }
         }
 
-        if ((selectedObject == null || hoverObject != selectedObject)&& hoverObject!=null)
+
+        if ((selectedObject == null || hoverObject != selectedObject) && hoverObject != null)
+        {
             hoverObject.GetComponent<SpriteRenderer>().color = Color.green;
+        }
+
         if (selectedObject != null)
+        {
             selectedObject.GetComponent<SpriteRenderer>().color = Color.red;
+            ui_man.char_data_assign(selectedObject);
+        }
 
 
     }
@@ -44,7 +62,6 @@ public class slection : MonoBehaviour
         if (tar != null)
         {
             tar.GetComponent<SpriteRenderer>().color = Color.white;
-            tar = null;
         }
     }
 }
