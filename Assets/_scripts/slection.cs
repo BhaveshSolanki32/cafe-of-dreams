@@ -3,6 +3,7 @@ using UnityEngine;
 public class slection : MonoBehaviour
 {
     Camera cam;
+    GameObject cameras;
     GameObject selectedObject;
     GameObject hoverObject;
     [SerializeField] ui_manager ui_man;
@@ -12,6 +13,7 @@ public class slection : MonoBehaviour
         {
             cam = Camera.main;
         }
+        cameras = cam.transform.parent.gameObject;
     }
 
     private void Update()
@@ -39,6 +41,11 @@ public class slection : MonoBehaviour
             {
                 hoverObject = null;
             }
+        }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            selectedObject = null;
+            ui_man.close_pannel(0);
         }
 
 
