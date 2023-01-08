@@ -8,4 +8,13 @@ public class charater_d : MonoBehaviour
     public int age;
     public string occup;
     public string sin;
+    public bool seeded;
+    public int seed_type;
+    [Header ("meter")]
+    public float drink;
+    public float seed;
+    public float fear;
+    public float sanity;
+
+
 }

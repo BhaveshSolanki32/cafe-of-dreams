@@ -21,6 +21,6 @@ public class ui_manager : MonoBehaviour
         panel.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = data.age.ToString();
         panel.GetChild(2).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = data.occup;
         panel.GetChild(3).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = data.sin;
-        
+        panel.GetChild(4).gameObject.GetComponent<Slider>().value = data.sanity;
     }
 }

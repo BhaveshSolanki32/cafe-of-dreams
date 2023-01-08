@@ -23,6 +23,7 @@ public class slection : MonoBehaviour
         object_deselect(hoverObject);
         if (Physics.Raycast(ray, out hit))
         {
+            Debug.DrawLine(ray.origin,hit.collider.gameObject.transform.position,Color.green);
             if (hit.collider.tag == "npc")
             {
                 hoverObject = hit.collider.gameObject;
@@ -54,7 +55,6 @@ public class slection : MonoBehaviour
 
 
     }
-
 
 
     void object_deselect(GameObject tar)
