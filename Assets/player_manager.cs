@@ -12,7 +12,10 @@ public class player_manager : MonoBehaviour
         inventroy_sin = sins_all;
     }
 
-    
+    public void on_seed_select()
+    {
+
+    }
 
 
 }
