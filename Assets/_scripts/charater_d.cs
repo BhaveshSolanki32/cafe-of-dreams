@@ -6,8 +6,8 @@ public class charater_d : MonoBehaviour
 {
     public string _name;
     public bool seeded;
-    public int[] seed_type;
-
+    public List<int> seed_type;
+    public Sprite dp;
 
     [Header("METER")]
     [Range(0,1)] public float drink;
@@ -17,5 +17,8 @@ public class charater_d : MonoBehaviour
 
     public string age;
     public string occup;
+    public void seed_enabler()
+    {
 
+    }
 }

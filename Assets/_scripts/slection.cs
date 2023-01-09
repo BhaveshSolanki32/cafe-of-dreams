@@ -4,12 +4,12 @@ public class slection : MonoBehaviour
 {
     Camera cam;
     GameObject cameras;
-    GameObject selectedObject;
+   static public GameObject selectedObject;
     GameObject hoverObject;
     [SerializeField] ui_manager ui_man;
     public float speed;
     Vector3 mouse_init_pos;
-
+    public player_manager pm;
 
     private void Start()
     {
@@ -48,7 +48,11 @@ public class slection : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     if (selectedObject != null)
-                        selectedObject.GetComponent<SpriteRenderer>().color = Color.white;
+                    {
+selectedObject.GetComponent<SpriteRenderer>().color = Color.white;
+                        selectedObject.transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                        
                     selectedObject = hoverObject;
                 }
 
@@ -62,11 +66,13 @@ public class slection : MonoBehaviour
         if ((selectedObject == null || hoverObject != selectedObject) && hoverObject != null)
         {
             hoverObject.GetComponent<SpriteRenderer>().color = Color.green;
+            hoverObject.transform.GetChild(0).gameObject.SetActive(true);
         }
 
         if (selectedObject != null)
         {
             selectedObject.GetComponent<SpriteRenderer>().color = Color.red;
+            selectedObject.transform.GetChild(0).gameObject.SetActive(true);
             ui_man.char_data_assign(selectedObject);
         }
     }
@@ -86,12 +92,17 @@ public class slection : MonoBehaviour
         if (tar != null)
         {
             tar.GetComponent<SpriteRenderer>().color = Color.white;
+            tar.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
     public void obj_deslect()
     {
         if (selectedObject != null)
-                        selectedObject.GetComponent<SpriteRenderer>().color = Color.white;
+        {
+selectedObject.GetComponent<SpriteRenderer>().color = Color.white;
+            selectedObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+                        
         selectedObject = null;
     }
 }

@@ -379,6 +379,195 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: businessman w_bac
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 33
+        width: 313
+        height: 1029
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adb77aa12b6a074aafbc92214963f7c
+      internalID: -1035350537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: businessman bac_w2
+      rect:
+        serializedVersion: 2
+        x: 2770
+        y: 44
+        width: 394
+        height: 999
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2a023955990d34f93e9708a9304369
+      internalID: -135889818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: businessman bac_3
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 46
+        width: 305
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f0a0d367af40a43980bc971e9444db
+      internalID: -1981960915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: businessman bac_w4
+      rect:
+        serializedVersion: 2
+        x: 3656
+        y: 29
+        width: 309
+        height: 1051
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9dbfcce5f0fe794e821b65b9ab97eb5
+      internalID: 756887014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: businessman spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3641
+        y: 481
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bcb12c6539bf949b9fb8d6a13c7bee
+      internalID: -1664883291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: businessman spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3643
+        y: 471
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c156cb455f58a4cacea3c05aca707f
+      internalID: 933627039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: businessman spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 418
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78e559f036cbb04792ba939a58d848d
+      internalID: 2074118899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: businessman spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 422
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0e8f8294bee5c4b8c7628dda37a4d7
+      internalID: -1101747948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: businessman spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 4019
+        y: 402
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8498dec8cf6c899429ff2c685fcdace3
+      internalID: 1742302763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -390,18 +579,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      businessman spritesheet_10: 156079535
-      businessman w_2: 1968255292
-      businessman spritesheet_7: -20430123
-      businessman spritesheet_8: 1731160576
-      businessman w_1: 1277974869
-      businessman sit: -860916642
-      businessman w_4: 1782480825
-      businessman spritesheet_0: 1095930752
-      businessman spritesheet_11: -406791249
+      businessman w_bac: -1035350537
+      businessman bac_w2: -135889818
+      businessman spritesheet_10: 1095930752
+      businessman spritesheet_5: 245690723
+      businessman w_2: 1293896542
+      businessman spritesheet_7: 356476305
+      businessman spritesheet_15: -253943897
+      businessman spritesheet_13: 602398899
+      businessman bac_w4: -1981960915
+      businessman spritesheet_8: -1851115159
+      businessman w_1: -127153631
+      businessman bac_3: -135889818
+      businessman spritesheet_14: -90190063
+      businessman sit: -1488130108
+      businessman w_4: -2005767011
+      businessman spritesheet_0: -20430123
+      businessman spritesheet_11: 1731160576
       businessman spritesheet_9: 263107354
-      businessman spritesheet_6: -2005767011
-      businessman w_3: -59210955
+      businessman spritesheet_6: 156079535
+      businessman spritesheet_12: 98128992
+      businessman w_3: -406791249
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
