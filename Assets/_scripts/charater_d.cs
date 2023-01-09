@@ -6,14 +6,16 @@ public class charater_d : MonoBehaviour
 {
     public string _name;
     public bool seeded;
-    public int seed_type;
-    [Header ("meter")]
-    public float drink;
-    public float seed;
-    public float fear;
-    public float sanity;
+    public int[] seed_type;
 
-    public int age;
+
+    [Header("METER")]
+    [Range(0,1)] public float drink;
+    [Range(0, 1)] public float seed;
+    [Range(0, 1)] public float fear;
+    [Range(0, 1)] public float sanity;
+
+    public string age;
     public string occup;
 
 }
