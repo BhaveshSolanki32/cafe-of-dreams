@@ -9,7 +9,6 @@ public class slection : MonoBehaviour
     [SerializeField] ui_manager ui_man;
     public float speed;
     Vector3 mouse_init_pos;
-    public player_manager pm;
 
     private void Start()
     {

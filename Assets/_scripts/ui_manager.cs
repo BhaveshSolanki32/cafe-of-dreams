@@ -5,7 +5,6 @@ using TMPro;
 public class ui_manager : MonoBehaviour
 {
     bool inv_open = true;
-    bool about_open = true;
     public void close_pannel(int num)
     {
         transform.GetChild(num).gameObject.SetActive(false);
